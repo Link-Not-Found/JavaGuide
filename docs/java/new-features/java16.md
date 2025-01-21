@@ -69,14 +69,14 @@ public void inc(Integer count) {
 
 引入外部内存访问 API 以允许 Java 程序安全有效地访问 Java 堆之外的外部内存。
 
-Java 14([ JEP 370](https://openjdk.org/jeps/370)) 的时候，第一次孵化外部内存访问 API，Java 15 中进行了第二次复活（[JEP 383](https://openjdk.org/jeps/383)），在 Java 16 中进行了第三次孵化。
+Java 14([JEP 370](https://openjdk.org/jeps/370)) 的时候，第一次孵化外部内存访问 API，Java 15 中进行了第二次复活（[JEP 383](https://openjdk.org/jeps/383)），在 Java 16 中进行了第三次孵化。
 
 引入外部内存访问 API 的目的如下：
 
 - 通用：单个 API 应该能够对各种外部内存（如本机内存、持久内存、堆内存等）进行操作。
 - 安全：无论操作何种内存，API 都不应该破坏 JVM 的安全性。
 - 控制：可以自由的选择如何释放内存（显式、隐式等）。
-- 可用：如果需要访问外部内存，API 应该是 `sun.misc.Unsafa`.
+- 可用：如果需要访问外部内存，API 应该是 `sun.misc.Unsafe`.
 
 ## JEP 394:instanceof 模式匹配(转正)
 
@@ -115,9 +115,9 @@ if (o instanceof String s) {
 
 ```java
 public class Outer {
-	class Inner {
-		static int age;
-	}
+  class Inner {
+    static int age;
+  }
 }
 ```
 
@@ -148,3 +148,5 @@ public class Outer {
 - [Consolidated JDK 16 Release Notes](https://www.oracle.com/java/technologies/javase/16all-relnotes.html)
 - [Java 16 正式发布，新特性一一解析](https://www.infoq.cn/article/IAkwhx7i9V7G8zLVEd4L)
 - [实操 | 剖析 Java16 新语法特性](https://xie.infoq.cn/article/8304c894c4e38318d38ceb116)（写的很赞）
+
+<!-- @include: @article-footer.snippet.md -->
